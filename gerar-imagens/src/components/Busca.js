@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Button } from 'primereact/button';
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
-import { InputText } from 'primereact/inputtext'
+import { InputText } from 'primereact/inputtext';
+
 export default class Busca extends React.Component {
 
     state = {
@@ -16,6 +17,7 @@ export default class Busca extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault()
+        this.props.onBuscaRealizada(this.state.termoDeBusca)
     }
 
     render() {
